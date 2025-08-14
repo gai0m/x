@@ -1,0 +1,576 @@
+/* CSS Variables for Color Palette */
+:root {
+    --primary-color: #1e3a8a;
+    --accent-color: #d4a15b;
+    --text-color: #4a4e69;
+    --bg-color: #f9f7f6;
+    --overlay-bg: rgba(255, 255, 255, 0.95);
+}
+
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Amiri', serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* Container and Layout */
+.container {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+}
+
+.main-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    text-align: center;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Language Toggle */
+.language-toggle {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2rem;
+}
+
+.language-button {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: var(--accent-color);
+    color: white;
+    border: none;
+    padding: 0.8rem 1.2rem;
+    border-radius: 25px;
+    cursor: pointer;
+    font-family: 'Amiri', serif;
+    font-size: 1rem;
+    font-weight: 700;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 8px rgba(212, 161, 91, 0.3);
+}
+
+.language-button:hover {
+    background: var(--primary-color);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(212, 161, 91, 0.4);
+}
+
+.flag-icon {
+    font-size: 1.2rem;
+}
+
+.language-text {
+    font-weight: bold;
+}
+
+/* RTL Support */
+body.rtl {
+    direction: rtl;
+    text-align: right;
+}
+
+body.rtl .main-title {
+    text-align: center;
+}
+
+body.rtl .story-text {
+    text-align: right;
+}
+
+body.rtl .story-text p {
+    text-align: justify;
+}
+
+body.rtl .audio-controls {
+    flex-direction: row-reverse;
+}
+
+body.rtl .volume-control {
+    flex-direction: row-reverse;
+}
+
+/* Collage Container */
+.collage-container {
+    position: relative;
+    width: 65vw;
+    height: 85vh;
+    max-width: 900px;
+    max-height: 900px;
+    border: 3px solid var(--accent-color);
+    border-radius: 8px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    background: linear-gradient(135deg, #f5f5f5, #e8e8e8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.collage-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* Interactive Areas */
+.interactive-area {
+    position: absolute;
+    border: 2px solid transparent;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    background: rgba(30, 58, 138, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 80px;
+    min-height: 60px;
+}
+
+.interactive-area:hover {
+    border-color: var(--accent-color);
+    box-shadow: 0 0 15px rgba(212, 161, 91, 0.6);
+    background: rgba(212, 161, 91, 0.2);
+    transform: scale(1.05);
+}
+
+.area-label {
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.8);
+    text-align: center;
+    padding: 0.5rem;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 4px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.interactive-area:hover .area-label {
+    opacity: 1;
+}
+
+/* Positioning for interactive areas (percentages relative to container) */
+#ishtar-gate-area {
+    top: 10%;
+    right: 5%;
+    width: 35%;
+    height: 30%;
+}
+
+#iraqi-flag-area {
+    top: 25%;
+    right: 15%;
+    width: 25%;
+    height: 20%;
+}
+
+#bronze-statue-area {
+    top: 30%;
+    left: 35%;
+    width: 20%;
+    height: 35%;
+}
+
+#palm-trees-area {
+    bottom: 20%;
+    left: 30%;
+    width: 25%;
+    height: 25%;
+}
+
+#cuneiform-area {
+    top: 60%;
+    left: 5%;
+    width: 20%;
+    height: 15%;
+}
+
+#city-names-area {
+    bottom: 35%;
+    left: 5%;
+    width: 25%;
+    height: 20%;
+}
+
+#ancient-architecture-area {
+    bottom: 10%;
+    right: 20%;
+    width: 30%;
+    height: 25%;
+}
+
+#iraq-text-area {
+    top: 20%;
+    left: 5%;
+    width: 25%;
+    height: 15%;
+}
+
+#rivers-area {
+    top: 5%;
+    left: 5%;
+    width: 30%;
+    height: 20%;
+}
+
+#ziggurat-area {
+    bottom: 5%;
+    left: 50%;
+    width: 20%;
+    height: 15%;
+}
+
+#mesopotamian-animals-area {
+    top: 15%;
+    right: 40%;
+    width: 15%;
+    height: 20%;
+}
+
+#ancient-script-area {
+    top: 45%;
+    left: 15%;
+    width: 18%;
+    height: 12%;
+}
+
+#cultural-heritage-area {
+    bottom: 25%;
+    right: 5%;
+    width: 22%;
+    height: 18%;
+}
+
+#mesopotamian-gods-area {
+    top: 35%;
+    right: 25%;
+    width: 20%;
+    height: 15%;
+}
+
+#ancient-rulers-area {
+    top: 35%;
+    right: 25%;
+    width: 20%;
+    height: 15%;
+}
+
+/* Audio Controls */
+.audio-controls {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 2rem;
+    padding: 1.5rem;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    border: 2px solid var(--accent-color);
+}
+
+.audio-button {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    background: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 1rem 1.5rem;
+    border-radius: 8px;
+    cursor: pointer;
+    font-family: 'Amiri', serif;
+    font-size: 1rem;
+    font-weight: 700;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 8px rgba(30, 58, 138, 0.3);
+}
+
+.audio-button:hover {
+    background: var(--accent-color);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(30, 58, 138, 0.4);
+}
+
+.audio-button:active {
+    transform: translateY(0);
+}
+
+.play-icon, .pause-icon {
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+}
+
+.audio-label {
+    font-style: italic;
+}
+
+.volume-control {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+}
+
+.volume-slider {
+    width: 120px;
+    height: 6px;
+    border-radius: 3px;
+    background: #ddd;
+    outline: none;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.volume-slider::-webkit-slider-thumb {
+    appearance: none;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background: var(--primary-color);
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+.volume-slider::-webkit-slider-thumb:hover {
+    background: var(--accent-color);
+    transform: scale(1.1);
+}
+
+.volume-slider::-moz-range-thumb {
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background: var(--primary-color);
+    cursor: pointer;
+    border: none;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.volume-label {
+    font-family: 'Amiri', serif;
+    font-weight: 700;
+    color: var(--text-color);
+    font-size: 0.9rem;
+}
+
+/* Story Overlay */
+.story-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--overlay-bg);
+    backdrop-filter: blur(15px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.4s ease;
+}
+
+.story-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.story-content {
+    position: relative;
+    max-width: 800px;
+    max-height: 80vh;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    padding: 3rem;
+    overflow-y: auto;
+    transform: translateY(30px);
+    transition: transform 0.4s ease;
+    border: 2px solid var(--accent-color);
+}
+
+.story-overlay.active .story-content {
+    transform: translateY(0);
+}
+
+.close-button {
+    position: absolute;
+    top: 1rem;
+    right: 1.5rem;
+    background: none;
+    border: none;
+    font-size: 2rem;
+    color: var(--text-color);
+    cursor: pointer;
+    transition: color 0.3s ease;
+    z-index: 1001;
+}
+
+.close-button:hover {
+    color: var(--primary-color);
+}
+
+/* Story Text Styling with Animations */
+.story-text h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+    text-align: center;
+    opacity: 0;
+    transform: translateY(-20px);
+    animation: fadeInDown 0.8s ease forwards;
+}
+
+.story-text h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.4rem;
+    color: var(--accent-color);
+    margin: 2rem 0 1rem 0;
+    border-bottom: 2px solid var(--accent-color);
+    padding-bottom: 0.5rem;
+    opacity: 0;
+    transform: translateX(-30px);
+    animation: slideInLeft 0.6s ease forwards;
+}
+
+.story-text p {
+    font-size: 1.1rem;
+    margin-bottom: 1.2rem;
+    text-align: justify;
+    line-height: 1.8;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.7s ease forwards;
+}
+
+/* Staggered animation delays */
+.story-text h3:nth-of-type(1) { animation-delay: 0.3s; }
+.story-text h3:nth-of-type(2) { animation-delay: 0.6s; }
+.story-text h3:nth-of-type(3) { animation-delay: 0.9s; }
+
+.story-text p:nth-of-type(2) { animation-delay: 0.4s; }
+.story-text p:nth-of-type(4) { animation-delay: 0.7s; }
+.story-text p:nth-of-type(6) { animation-delay: 1.0s; }
+
+/* Keyframe animations */
+@keyframes fadeInDown {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideInLeft {
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Typing effect for special elements */
+.typing-effect {
+    overflow: hidden;
+    border-right: 2px solid var(--accent-color);
+    white-space: nowrap;
+    animation: typing 2s steps(40, end), blink-caret 0.75s step-end infinite;
+}
+
+@keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+@keyframes blink-caret {
+    from, to { border-color: transparent; }
+    50% { border-color: var(--accent-color); }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        padding: 1rem;
+    }
+    
+    .main-title {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+    }
+    
+    .collage-container {
+        width: 90vw;
+        height: 70vh;
+    }
+    
+    .story-content {
+        margin: 1rem;
+        padding: 2rem;
+        max-height: 85vh;
+    }
+    
+    .story-text h2 {
+        font-size: 1.6rem;
+    }
+    
+    .story-text h3 {
+        font-size: 1.2rem;
+    }
+    
+    .story-text p {
+        font-size: 1rem;
+    }
+    
+    .area-label {
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .main-title {
+        font-size: 1.6rem;
+    }
+    
+    .collage-container {
+        width: 95vw;
+        height: 60vh;
+    }
+    
+    .story-content {
+        padding: 1.5rem;
+    }
+    
+    .interactive-area {
+        min-width: 60px;
+        min-height: 45px;
+    }
+}

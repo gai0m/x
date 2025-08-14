@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mesopotamia's Modern Echoes</title>
+    <link rel="stylesheet" href="colors.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Amiri:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h1 class="main-title" data-en="Mesopotamia's Modern Echoes" data-ar="أصداء بلاد الرافدين الحديثة">Mesopotamia's Modern Echoes</h1>
+        
+        <!-- Language Toggle -->
+        <div class="language-toggle">
+            <button id="language-btn" class="language-button">
+                <span class="flag-icon">🇮🇶</span>
+                <span class="language-text" data-en="العربية" data-ar="English">العربية</span>
+            </button>
+        </div>
+        
+        <div id="collage-container" class="collage-container">
+            <img src="iraq.jpeg" alt="Iraqi Cultural Collage" class="collage-image">
+            
+            <!-- Interactive areas positioned over the collage -->
+            <div id="ishtar-gate-area" class="interactive-area" data-story="ishtar-gate">
+                <span class="area-label" data-en="Ishtar Gate" data-ar="بوابة عشتار">Ishtar Gate</span>
+            </div>
+            
+            <div id="iraqi-flag-area" class="interactive-area" data-story="iraqi-flag">
+                <span class="area-label" data-en="Iraqi Flag" data-ar="العلم العراقي">Iraqi Flag</span>
+            </div>
+            
+            <div id="bronze-statue-area" class="interactive-area" data-story="bronze-statue">
+                <span class="area-label" data-en="Scholar Statue" data-ar="تمثال العالم">Scholar Statue</span>
+            </div>
+            
+            <div id="palm-trees-area" class="interactive-area" data-story="palm-trees">
+                <span class="area-label" data-en="Date Palms" data-ar="نخيل التمر">Date Palms</span>
+            </div>
+            
+            <div id="cuneiform-area" class="interactive-area" data-story="cuneiform">
+                <span class="area-label" data-en="Cuneiform" data-ar="الكتابة المسمارية">Cuneiform</span>
+            </div>
+            
+            <div id="city-names-area" class="interactive-area" data-story="city-names">
+                <span class="area-label" data-en="Iraqi Cities" data-ar="المدن العراقية">Iraqi Cities</span>
+            </div>
+            
+            <div id="ancient-architecture-area" class="interactive-area" data-story="ancient-architecture">
+                <span class="area-label" data-en="Architecture" data-ar="العمارة">Architecture</span>
+            </div>
+            
+            <div id="iraq-text-area" class="interactive-area" data-story="iraq-text">
+                <span class="area-label" data-en="IRAQ" data-ar="العراق">IRAQ</span>
+            </div>
+            
+            <div id="rivers-area" class="interactive-area" data-story="rivers">
+                <span class="area-label" data-en="Rivers" data-ar="الأنهار">Rivers</span>
+            </div>
+            
+            <div id="ziggurat-area" class="interactive-area" data-story="ziggurat">
+                <span class="area-label" data-en="Ziggurat" data-ar="الزقورة">Ziggurat</span>
+            </div>
+            
+            <div id="mesopotamian-animals-area" class="interactive-area" data-story="mesopotamian-animals">
+                <span class="area-label" data-en="Sacred Animals" data-ar="الحيوانات المقدسة">Sacred Animals</span>
+            </div>
+            
+            <div id="ancient-script-area" class="interactive-area" data-story="ancient-script">
+                <span class="area-label" data-en="Ancient Scripts" data-ar="النصوص القديمة">Ancient Scripts</span>
+            </div>
+            
+            <div id="cultural-heritage-area" class="interactive-area" data-story="cultural-heritage">
+                <span class="area-label" data-en="Cultural Heritage" data-ar="التراث الثقافي">Cultural Heritage</span>
+            </div>
+            
+            <div id="ancient-rulers-area" class="interactive-area" data-story="ancient-rulers">
+                <span class="area-label" data-en="Ancient Rulers" data-ar="الحكام القدماء">Ancient Rulers</span>
+            </div>
+        </div>
+        
+        <!-- Audio Controls -->
+        <div class="audio-controls">
+            <audio id="background-audio" loop>
+                <source src="iraqinasheed.org.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+            <button id="audio-toggle" class="audio-button">
+                <span class="play-icon">▶</span>
+                <span class="pause-icon" style="display: none;">⏸</span>
+                <span class="audio-label" data-en="Iraqi Nasheed" data-ar="نشيد عراقي">Iraqi Nasheed</span>
+            </button>
+            <div class="volume-control">
+                <input type="range" id="volume-slider" min="0" max="100" value="50" class="volume-slider">
+                <span class="volume-label" data-en="Volume" data-ar="الصوت">Volume</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Story overlay -->
+    <div id="story-overlay" class="story-overlay">
+        <div class="story-content">
+            <button id="close-overlay" class="close-button">&times;</button>
+            <div id="story-text" class="story-text">
+                <!-- Content will be dynamically inserted here -->
+            </div>
+        </div>
+    </div>
+
+    <script src="intractive.js"></script>
+</body>
+</html>
